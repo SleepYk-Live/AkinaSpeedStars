@@ -19,6 +19,9 @@ namespace AkinaSpeedStars.DAL.Entities
         public int NumberOfDoors { get; set; }
         public Destination Destination { get; set; } 
         public Destination AdditionalDestination { get; set; }
-        public IEnumerable<PartGroup> PartGroups { get; set; }
+
+        public List<ModelCode> Codes { get; set; }
+
+        public List<PartGroup> PartGroups { get; set; }
     }
 }

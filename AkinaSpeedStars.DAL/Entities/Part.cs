@@ -15,5 +15,7 @@ namespace AkinaSpeedStars.DAL.Entities
         public DateTime ProductionStart { get; set; }
         public DateTime? ProductionEnd { get; set; }
         public string Info { get; set; }
+
+        public List<PartTree> PartTrees { get; set; }
     }
 }

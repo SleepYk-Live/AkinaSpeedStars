@@ -10,6 +10,10 @@ namespace AkinaSpeedStars.DAL.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IEnumerable<Scheme> Schemes { get; set; }
+
+        public int PartGroupId { get; set; }
+        public PartGroup PartGroup { get; set; }
+
+        public List<Scheme> Schemes { get; set; }
     }
 }

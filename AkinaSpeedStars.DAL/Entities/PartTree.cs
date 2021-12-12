@@ -11,6 +11,9 @@ namespace AkinaSpeedStars.DAL.Entities
         public int Id { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
-        public IEnumerable<Part> Parts { get; set; }
+
+        public List<Scheme> Schemes { get; set; }
+
+        public List<Part> Parts { get; set; }
     }
 }

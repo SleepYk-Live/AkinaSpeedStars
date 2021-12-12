@@ -12,6 +12,10 @@ namespace AkinaSpeedStars.DAL.Entities
         public string Code { get; set; }
         public DateTime ProductionStart { get; set; }
         public DateTime ProductionEnd { get; set; }
-        public IEnumerable<Kit> Kits { get; set; }
+
+        public int CarId { get; set; }
+        public Car Car { get; set; }
+
+        public List<Kit> Kits { get; set; }
     }
 }
