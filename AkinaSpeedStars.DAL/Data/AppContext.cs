@@ -21,7 +21,7 @@ namespace AkinaSpeedStars.DAL.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\AkinaSpeedStars;Initial Catalog=AppDB;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=akinaappdb;Trusted_Connection=True;");
         }
     }
 }
