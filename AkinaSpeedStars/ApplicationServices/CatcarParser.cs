@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.ApplicationServices
 {
+    /// <summary>
+    /// Catcar parser implementation
+    /// </summary>
     // TODO: implement parsing for Catcar
     internal class CatcarParser : IParser
     {

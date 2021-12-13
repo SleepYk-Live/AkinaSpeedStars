@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Entities
 {
+    /// <summary>
+    /// Car to ModelCode - 1 to many
+    /// ModelCode to Kits - 1 to many
+    /// </summary>
     internal class ModelCode
     {
         public int Id { get; set; }

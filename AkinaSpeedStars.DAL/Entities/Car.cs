@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Entities
 {
+    /// <summary>
+    /// Entity which has 1 to many relationship to ModelCode entity
+    /// </summary>
     internal class Car
     {
         public int Id { get; set; }

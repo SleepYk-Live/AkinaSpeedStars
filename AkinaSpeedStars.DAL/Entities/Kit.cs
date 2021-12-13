@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Entities
 {
+    /// <summary>
+    /// Kit to ModelCode - 1 to many
+    /// Kit to PartGroups - many to many
+    /// </summary>
     internal class Kit
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public string Engine { get; set; }
         public string Body { get; set; }
         public string Grade { get; set; } 
@@ -20,7 +25,8 @@ namespace AkinaSpeedStars.DAL.Entities
         public Destination Destination { get; set; } 
         public Destination AdditionalDestination { get; set; }
 
-        public List<ModelCode> Codes { get; set; }
+        public int ModelId { get; set; }
+        public ModelCode ModelCode { get; set; }
 
         public List<PartGroup> PartGroups { get; set; }
     }
