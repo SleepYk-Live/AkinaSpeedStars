@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Entities
 {
+    /// <summary>
+    /// PartTree to Part - 1 to many
+    /// </summary>
     internal class Part
     {
         [Key]
@@ -16,6 +19,7 @@ namespace AkinaSpeedStars.DAL.Entities
         public DateTime? ProductionEnd { get; set; }
         public string Info { get; set; }
 
-        public List<PartTree> PartTrees { get; set; }
+        public int PartTreeId { get; set; }
+        public PartTree PartTree { get; set; }
     }
 }

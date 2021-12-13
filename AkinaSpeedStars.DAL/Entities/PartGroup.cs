@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Entities
 {
+    /// <summary>
+    /// Kit to PartGroup - many to many
+    /// PartGroup to Subgroup - 1 to many
+    /// </summary>
     internal class PartGroup
     {
         public int Id { get; set; }

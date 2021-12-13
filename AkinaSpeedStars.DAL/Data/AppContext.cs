@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Data
 {
+    /// <summary>
+    /// Creates application database
+    /// </summary>
     internal class AppContext : DbContext
     {
         public DbSet<Car> Cars { get; set; }

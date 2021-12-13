@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.ApplicationServices.Contracts
 {
+    /// <summary>
+    /// Contract for base parser functionality, it can be useful if I want to parse data from multiple sites
+    /// </summary>
     internal interface IParser
     {
         public string ModelsUrl { get; set; }

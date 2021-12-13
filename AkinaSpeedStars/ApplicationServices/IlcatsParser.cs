@@ -12,15 +12,14 @@ using System.Threading.Tasks;
 namespace AkinaSpeedStars.ApplicationServices
 {
     /// <summary>
-    /// 
+    /// Parse data from Ilcast
     /// </summary>
     // TODO: Provide multithreading processing for all methods
+    // TODO: Code review
     internal class IlcatsParser : IParser
     {
         private readonly IConfiguration _configuration;
         public string ModelsUrl { get; set; }
-
-        public List<string> PartGroupsUrls { get { return null; } }
 
         public IlcatsParser()
         {

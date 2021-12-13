@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Entities
 {
+    /// <summary>
+    /// Scheme to PartSubgroup - 1 to 1
+    /// Scheme to PartTree - 1 to many
+    /// </summary>
     internal class Scheme
     {
         public int Id { get; set; }
