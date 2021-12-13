@@ -157,17 +157,18 @@ namespace AkinaSpeedStars.ApplicationServices
             List<PartTree> parts = new List<PartTree>();
             var table = document.GetElementsByTagName("tbody").First();
             var partTrees = table.GetElementsByTagName("tr").Where(x => x.ChildElementCount == 1);
-            var nodes = partTrees.Select(x => x.NextSibling);
+            var nodes = table.GetElementsByTagName("tr").Except(partTrees);
 
             foreach (var partTreeItem in partTrees)
             {
                 var partTree = new PartTree();
-                partTree.Name = (string)partTreeItem.TextContent.Skip(5);
-                partTree.Code = (string)partTreeItem.TextContent.Take(5);
+                partTree.Name = partTreeItem.GetElementsByTagName("th").First().TextContent.Skip(5).ToString();
+                partTree.Code = partTreeItem.GetElementsByTagName("th").First().TextContent.Take(5).ToString();
+                partTree.Parts = new List<Part>();
 
-                foreach (var node in nodes)
+                foreach (var node in nodes.Where(x => x.ClassName == partTreeItem.ClassName))
                 {
-                    var columns = (node.ChildNodes as IHtmlElement).GetElementsByTagName("td");
+                    var columns = node.GetElementsByTagName("td");
 
                     Part part = new Part();
                     part.Code = columns.ElementAt(0).TextContent;
