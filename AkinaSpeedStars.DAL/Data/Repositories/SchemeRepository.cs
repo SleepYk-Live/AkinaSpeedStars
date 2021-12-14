@@ -28,7 +28,8 @@ namespace AkinaSpeedStars.DAL.Data.Repositories
 
         public Scheme Get(int id) => _db.Schemes.Find(id);
 
-        public IEnumerable<Scheme> GetAll() => _db.Schemes;
+        // Using eager loading to get all data about Parts in scheme
+        public IEnumerable<Scheme> GetAll() => _db.Schemes.Include(x => x.PartTrees);
 
         public void Update(Scheme scheme) => _db.Entry(scheme).State = EntityState.Modified;
     }

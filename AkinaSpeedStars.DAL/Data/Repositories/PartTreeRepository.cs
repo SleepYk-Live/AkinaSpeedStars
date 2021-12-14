@@ -28,7 +28,8 @@ namespace AkinaSpeedStars.DAL.Data.Repositories
 
         public PartTree Get(int id) => _db.PartTrees.Find(id);
 
-        public IEnumerable<PartTree> GetAll() => _db.PartTrees;
+        // Eager loading to get all parts in scheme
+        public IEnumerable<PartTree> GetAll() => _db.PartTrees.Include(x => x.Parts);
 
         public void Update(PartTree item) => _db.Entry(item).State = EntityState.Modified;
     }
