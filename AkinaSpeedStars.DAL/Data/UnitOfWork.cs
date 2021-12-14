@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Data
 {
+    /// <summary>
+    /// Repository and UoW implementation to simplify database usage
+    /// </summary>
     internal class UnitOfWork : IUnitOfWork
     {
         private readonly AppContext _db;
