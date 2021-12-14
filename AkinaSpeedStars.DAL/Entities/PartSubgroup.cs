@@ -10,7 +10,7 @@ namespace AkinaSpeedStars.DAL.Entities
     /// PartGroup to PartSubgroup - 1 to many
     /// Scheme to PartSubgroup - 1 to 1
     /// </summary>
-    internal class PartSubgroup
+    public class PartSubgroup
     {
         public int Id { get; set; }
         public string Name { get; set; }

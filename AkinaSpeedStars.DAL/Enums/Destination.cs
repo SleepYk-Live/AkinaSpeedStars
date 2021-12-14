@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Enums
 {
-    internal enum Destination
+    public enum Destination
     {
         EUR,
         ARL,
