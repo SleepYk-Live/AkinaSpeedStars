@@ -13,6 +13,7 @@ namespace AkinaSpeedStars.DAL.Data
     /// </summary>
     internal class AppContext : DbContext
     {
+        private readonly string _connectionString;
         public DbSet<Car> Cars { get; set; }
         public DbSet<Kit> Kits { get; set; }
         public DbSet<ModelCode> ModelCodes { get; set; }
@@ -22,9 +23,14 @@ namespace AkinaSpeedStars.DAL.Data
         public DbSet<PartTree> PartTrees { get; set; }
         public DbSet<Scheme> Schemes { get; set; }
 
+        public AppContext(string connectionString)
+        {
+            _connectionString = connectionString ?? @"Server=(localdb)\mssqllocaldb;Database=akinaappdb;Trusted_Connection=True;";
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=akinaappdb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(_connectionString);
         }
     }
 }
