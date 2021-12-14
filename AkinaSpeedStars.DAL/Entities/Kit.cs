@@ -11,7 +11,7 @@ namespace AkinaSpeedStars.DAL.Entities
     /// Kit to ModelCode - 1 to many
     /// Kit to PartGroups - many to many
     /// </summary>
-    internal class Kit
+    public class Kit
     {
         public int Id { get; set; }
         public string Name { get; set; }

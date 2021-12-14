@@ -11,4 +11,8 @@
     <PackageReference Include="AngleSharp" Version="0.16.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AkinaSpeedStars.DAL\AkinaSpeedStars.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

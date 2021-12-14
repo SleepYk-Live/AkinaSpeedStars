@@ -10,7 +10,7 @@ namespace AkinaSpeedStars.DAL.Entities
     /// Car to ModelCode - 1 to many
     /// ModelCode to Kits - 1 to many
     /// </summary>
-    internal class ModelCode
+    public class ModelCode
     {
         public int Id { get; set; }
         public string Code { get; set; }

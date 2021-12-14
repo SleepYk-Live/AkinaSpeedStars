@@ -11,7 +11,7 @@ namespace AkinaSpeedStars.DAL.Entities
     /// PartTree to Part - 1 to many
     /// In that case I purpose that Parts cant be in many PartTrees
     /// </summary>
-    internal class PartTree
+    public class PartTree
     {
         public int Id { get; set; }
         public string Code { get; set; }

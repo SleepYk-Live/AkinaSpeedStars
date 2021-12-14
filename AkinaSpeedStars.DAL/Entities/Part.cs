@@ -10,7 +10,7 @@ namespace AkinaSpeedStars.DAL.Entities
     /// <summary>
     /// PartTree to Part - 1 to many
     /// </summary>
-    internal class Part
+    public class Part
     {
         [Key]
         public long Code { get; set; } 
