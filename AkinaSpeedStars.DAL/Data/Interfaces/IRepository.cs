@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AkinaSpeedStars.DAL.Data.Interfaces
 {
     // TODO: Provide asynchrony
-    internal interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
         T Get(int id);

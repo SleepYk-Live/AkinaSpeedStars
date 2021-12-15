@@ -12,7 +12,7 @@ namespace AkinaSpeedStars.DAL.Data
     /// <summary>
     /// Repository and UoW implementation to simplify database usage
     /// </summary>
-    internal class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly AppContext _db;
         private CarRepository _carRepository;

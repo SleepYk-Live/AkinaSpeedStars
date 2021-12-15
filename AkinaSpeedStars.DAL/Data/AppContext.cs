@@ -25,6 +25,7 @@ namespace AkinaSpeedStars.DAL.Data
 
         public AppContext(string connectionString)
         {
+            /// TODO: set connection string in configuration file (code smell)
             _connectionString = connectionString ?? @"Server=(localdb)\mssqllocaldb;Database=akinaappdb;Trusted_Connection=True;";
         }
 
