@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AkinaSpeedStars.DAL.Data.Interfaces
 {
-    internal interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         IRepository<Car> Cars { get; }
         IRepository<Kit> Kits { get; }
