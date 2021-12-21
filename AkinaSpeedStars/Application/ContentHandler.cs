@@ -1,14 +1,16 @@
-﻿using System;
+﻿using AkinaSpeedStars.BL.Application.Contracts;
+using AkinaSpeedStars.BL.Infrastructure;
+using AkinaSpeedStars.BL.Infrastructure.Contracts;
+using AkinaSpeedStars.BL.Models.Converters;
+using AkinaSpeedStars.DAL.Data;
+using AkinaSpeedStars.DAL.Data.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AkinaSpeedStars.ApplicationServices.Contracts;
-using AkinaSpeedStars.DAL.Data;
-using AkinaSpeedStars.DAL.Data.Interfaces;
-using AkinaSpeedStars.Models.Converters;
 
-namespace AkinaSpeedStars.ApplicationServices
+namespace AkinaSpeedStars.BL.Application
 {
     /// <summary>
     /// It is main processing class
@@ -43,12 +45,12 @@ namespace AkinaSpeedStars.ApplicationServices
         {
             var result = await _parser.GetModels();
 
-            foreach(var it in result)
+            foreach (var it in result)
             {
                 var car = CarConverter.ToSource(it);
                 _db.Cars.Create(car);
-                
-                foreach(var code in it.ModelCodes)
+
+                foreach (var code in it.ModelCodes)
                 {
                     _db.ModelCodes.Create(ModelCodeConverter.ToSource(car, code));
                 }
@@ -59,10 +61,10 @@ namespace AkinaSpeedStars.ApplicationServices
         {
             var modelCodes = _db.ModelCodes.GetAll();
 
-            foreach(var code in modelCodes)
+            foreach (var code in modelCodes)
             {
                 var result = await _parser.GetKits(code.Code);
-                foreach(var it in result)
+                foreach (var it in result)
                 {
                     _db.Kits.Create(KitConverter.ToSource(it, code));
                 }
@@ -73,10 +75,10 @@ namespace AkinaSpeedStars.ApplicationServices
         {
             var kits = _db.Kits.GetAll();
 
-            foreach(var kit in kits)
+            foreach (var kit in kits)
             {
                 var result = await _parser.GetPartGroups(kit.ModelCode.Code, kit.Name);
-                foreach(var it in result)
+                foreach (var it in result)
                 {
                     _db.PartGroups.Create(PartGroupConverter.ToSource(it));
                 }
@@ -94,7 +96,7 @@ namespace AkinaSpeedStars.ApplicationServices
                 foreach (var kit in kits)
                 {
                     var result = await _parser.GetPartSubgroups(kit.ModelCode.Car.ModelName, kit.Name, group.Name);
-                    foreach(var it in result)
+                    foreach (var it in result)
                     {
                         var scheme = await _parser.GetScheme(kit.ModelCode.Car.ModelName, kit.Name, group.Name, it.Name);
                         // TODO: provide file path
@@ -102,11 +104,11 @@ namespace AkinaSpeedStars.ApplicationServices
                         _db.PartSubgroups.Create(partSubgroup);
                         var sc = _db.Scheme.Find(s => s.Image == scheme.ImageUrl).Single();
 
-                        foreach(var item in scheme.PartTrees)
+                        foreach (var item in scheme.PartTrees)
                         {
                             var partTree = PartTreeConverter.ToSource(item, sc);
                             _db.PartTrees.Create(partTree);
-                            foreach(var part in item.Parts)
+                            foreach (var part in item.Parts)
                             {
                                 _db.Parts.Create(PartConverter.ToSource(part, partTree));
                                 _db.PartTrees.Update(partTree);

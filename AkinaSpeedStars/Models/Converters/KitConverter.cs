@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using KitDTO = AkinaSpeedStars.DAL.Entities.Kit;
 using ModelCodeDTO = AkinaSpeedStars.DAL.Entities.ModelCode;
 
-namespace AkinaSpeedStars.Models.Converters
+namespace AkinaSpeedStars.BL.Models.Converters
 {
     internal class KitConverter
     {

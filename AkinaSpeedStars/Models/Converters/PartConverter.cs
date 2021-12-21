@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PartDTO = AkinaSpeedStars.DAL.Entities.Part;
 using PartTreeDTO = AkinaSpeedStars.DAL.Entities.PartTree;
 
-namespace AkinaSpeedStars.Models.Converters
+namespace AkinaSpeedStars.BL.Models.Converters
 {
     internal class PartConverter
     {

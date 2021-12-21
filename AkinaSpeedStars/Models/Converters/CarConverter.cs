@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AkinaSpeedStars.Models;
+using AkinaSpeedStars.BL.Models;
 using CarDTO = AkinaSpeedStars.DAL.Entities.Car;
 
-namespace AkinaSpeedStars.Models.Converters
+namespace AkinaSpeedStars.BL.Models.Converters
 {
     internal static class CarConverter
     {
