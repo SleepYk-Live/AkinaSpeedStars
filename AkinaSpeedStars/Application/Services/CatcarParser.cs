@@ -1,12 +1,12 @@
-﻿using AkinaSpeedStars.ApplicationServices.Contracts;
-using AkinaSpeedStars.Models;
+﻿using AkinaSpeedStars.BL.Application.Contracts;
+using AkinaSpeedStars.BL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AkinaSpeedStars.ApplicationServices
+namespace AkinaSpeedStars.BL.Application.Services
 {
     /// <summary>
     /// Catcar parser implementation

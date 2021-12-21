@@ -1,15 +1,14 @@
-﻿using AkinaSpeedStars.ApplicationServices.Contracts;
-using AkinaSpeedStars.Models;
+﻿using AkinaSpeedStars.BL.Application.Contracts;
+using AkinaSpeedStars.BL.Models;
 using AngleSharp;
 using AngleSharp.Html.Dom;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace AkinaSpeedStars.ApplicationServices
+namespace AkinaSpeedStars.BL.Application.Services
 {
     /// <summary>
     /// Parse data from Ilcast
@@ -33,7 +32,7 @@ namespace AkinaSpeedStars.ApplicationServices
             var urls = models.Where(x => x.ModelName == model).FirstOrDefault().ModelLinks;
             var kits = new List<Kit>();
 
-            foreach(var url in urls)
+            foreach (var url in urls)
             {
                 var document = await BrowsingContext.New(_configuration).OpenAsync(url);
                 var table = document.GetElementsByTagName("tbody").FirstOrDefault();
@@ -114,7 +113,7 @@ namespace AkinaSpeedStars.ApplicationServices
             var document = await BrowsingContext.New(_configuration).OpenAsync(url);
             var categories = document.GetElementsByClassName("name");
 
-            foreach(var category in categories)
+            foreach (var category in categories)
             {
                 PartGroup partGroup = new PartGroup();
                 partGroup.Name = category.TextContent;
@@ -133,7 +132,7 @@ namespace AkinaSpeedStars.ApplicationServices
             var document = await BrowsingContext.New(_configuration).OpenAsync(url);
             var subGroups = document.GetElementsByClassName("name");
 
-            foreach(var subgroupItem in subGroups)
+            foreach (var subgroupItem in subGroups)
             {
                 var subgroup = new PartSubgroup();
                 subgroup.Name = subgroupItem.TextContent;

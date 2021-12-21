@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkinaSpeedStars", "AkinaSpeedStars\AkinaSpeedStars.csproj", "{B0C2F67E-D598-4B7E-BB6B-F036D332E496}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkinaSpeedStars.BL", "AkinaSpeedStars\AkinaSpeedStars.BL.csproj", "{B0C2F67E-D598-4B7E-BB6B-F036D332E496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkinaSpeedStars.DAL", "AkinaSpeedStars.DAL\AkinaSpeedStars.DAL.csproj", "{1EB077BF-CD31-4BD0-8ED2-A7EFE86AA24B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkinaSpeedStars.DAL", "AkinaSpeedStars.DAL\AkinaSpeedStars.DAL.csproj", "{1EB077BF-CD31-4BD0-8ED2-A7EFE86AA24B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkinaSpeedStars.Admin", "AkinaSpeedStars.Admin\AkinaSpeedStars.Admin.csproj", "{72FA655A-8A92-42DD-9B10-0536F848E5EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkinaSpeedStars.Presentation", "AkinaSpeedStars.Presentation\AkinaSpeedStars.Presentation.csproj", "{8003D727-3AEC-43C0-9D23-E129BC80A94B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{1EB077BF-CD31-4BD0-8ED2-A7EFE86AA24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EB077BF-CD31-4BD0-8ED2-A7EFE86AA24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EB077BF-CD31-4BD0-8ED2-A7EFE86AA24B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72FA655A-8A92-42DD-9B10-0536F848E5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72FA655A-8A92-42DD-9B10-0536F848E5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72FA655A-8A92-42DD-9B10-0536F848E5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72FA655A-8A92-42DD-9B10-0536F848E5EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8003D727-3AEC-43C0-9D23-E129BC80A94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8003D727-3AEC-43C0-9D23-E129BC80A94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8003D727-3AEC-43C0-9D23-E129BC80A94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8003D727-3AEC-43C0-9D23-E129BC80A94B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

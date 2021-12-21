@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace AkinaSpeedStars
+namespace AkinaSpeedStars.Presentation
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -7,7 +7,7 @@ using PartSubgroupDTO = AkinaSpeedStars.DAL.Entities.PartSubgroup;
 using PartGroupDTO = AkinaSpeedStars.DAL.Entities.PartGroup;
 using SchemeDTO = AkinaSpeedStars.DAL.Entities.Scheme;
 
-namespace AkinaSpeedStars.Models.Converters
+namespace AkinaSpeedStars.BL.Models.Converters
 {
     internal class PartSubgroupConverter
     {

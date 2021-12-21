@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PartGroupDTO = AkinaSpeedStars.DAL.Entities.PartGroup;
 
-namespace AkinaSpeedStars.Models.Converters
+namespace AkinaSpeedStars.BL.Models.Converters
 {
     internal class PartGroupConverter
     {

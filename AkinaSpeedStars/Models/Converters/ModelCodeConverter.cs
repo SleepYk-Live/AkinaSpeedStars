@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ModelCodeDTO = AkinaSpeedStars.DAL.Entities.ModelCode;
 using CarDTO = AkinaSpeedStars.DAL.Entities.Car;
 
-namespace AkinaSpeedStars.Models.Converters
+namespace AkinaSpeedStars.BL.Models.Converters
 {
     public class ModelCodeConverter
     {

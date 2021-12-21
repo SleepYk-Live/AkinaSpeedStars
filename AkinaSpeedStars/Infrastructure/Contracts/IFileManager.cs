@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AkinaSpeedStars.ApplicationServices.Contracts
+namespace AkinaSpeedStars.BL.Infrastructure.Contracts
 {
     /// <summary>
     /// This interface created for future unit testing purposes

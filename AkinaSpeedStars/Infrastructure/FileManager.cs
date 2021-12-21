@@ -1,4 +1,4 @@
-﻿using AkinaSpeedStars.ApplicationServices.Contracts;
+﻿using AkinaSpeedStars.BL.Infrastructure.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -9,7 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AkinaSpeedStars.ApplicationServices
+namespace AkinaSpeedStars.BL.Infrastructure
 {
     /// <summary>
     /// It is supposed that FileManager download image by url and return relative path
